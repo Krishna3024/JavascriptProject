@@ -53,6 +53,7 @@ function select_states_cities(value) {
   document.getElementsByName("city")[0].innerHTML = citiesOptions;
 }
 
+//add new row in table after submit
 function addRow(event) {
   event.preventDefault();
 
