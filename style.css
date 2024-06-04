@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box; /*box-sizing property allows us to include the padding and border in an element's total width and height. */
+  align-items: flex-start; /*aligns the flex items at the top of the container */
+  justify-content: center;
+}
+
+#form-container {
+  width: 30%;
+  padding: 20px;
+  background-color: #fff;
+  margin-left: 2%;
+  margin-right: 5%;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* display: flex; */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  width: 20%;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: inline;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 2px;
+  display: inline;
+}
+
+label {
+  margin-right: 5px;
+  display: inline;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.button-row {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+#data-table {
+  width: 75%;
+  margin-top: 20px;
+}
+
+#data-table table {
+  width: 100%;
+  border: 1px solid #ccc;
+  table-layout: fixed;
+}
+
+#data-table th,
+#data-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#data-table th {
+  background-color: #b56b6b;
+}
+
+#error{
+  color:#f44336;
+}
+
+#myInput{
+  padding: 12px 20px 12px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  width: 84%;
+}
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="static_user_data()">
+    <form id="form-container" onsubmit="addRow(event)">
+      <table>
+        <h1>User Form</h1>
+        <tr class="row">
+          <th align="left">Name:</th>
+          <td>
+            <input type="text" name="name" />
+            <span class="error" name="nameError" ></span>
+          </td>
+        </tr>
+        <tr class="row">
+          <th align="left">Email:</th>
+          <td>
+            <input type="email" name="email" />
+            <span class="error" name="emailError" ></span>
+          </td>
+        </tr>
+        <tr class="row">
+          <th align="left">Gender:</th>
+          <td>
+            <input type="radio" name="gender" value="Male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female" />
+            <label for="female">Female</label><br />
+            <span class="error" name="genderError" ></span>
+          </td>
+        </tr>
+        <tr class="row">
+          <th align="left">Hobbies:</th>
+          <td>
+            <input type="checkbox" name="hobby" value="Dancing" />
+            <label for="dance">Dancing</label>
+            <input type="checkbox" name="hobby" value="Travelling" />
+            <label for="travel">Travelling</label>
+            <input type="checkbox" name="hobby" value="Sports" />
+            <label for="sport">Sports</label>
+            <span class="error" name="hobbyError" ></span>
+          </td>
+        </tr>
+        <tr class="row">
+          <th align="left">Country:</th>
+          <td>
+            <select name="country">
+              <option value="" selected disabled hidden>Choose Country</option>
+              <option value="India">India</option>
+            </select>
+            <span class="error" name="countryError" ></span>
+          </td>
+        </tr>
+        <tr class="row">
+          <th align="left">State:</th>
+          <td>
+            <select name="state" onchange="select_states_cities(this.value)">
+              <option value="" selected disabled hidden>Choose State</option>
+              <option>Gujarat</option>
+              <option>Maharashtra</option>
+              <option>Rajasthan</option>
+            </select>
+            <span class="error" name="stateError" ></span>
+          </td>
+        </tr>
+        <tr class="row">
+          <th align="left">City:</th>
+          <td>
+            <select name="city">
+              <option value="" selected disabled hidden>Choose City</option>
+            </select>
+            <span class="error" name="cityError" ></span>
+          </td>
+        </tr>
+      </table>
+      <div class="button-row">
+        <button type="submit" name="submit-button"  >Submit</button>
+        <button type="reset" name="reset-button" style="background-color: #f44336;">Reset</button>
+        <button type="button" name="update-button" style="display: none">Update </button>
+        <button type="button" name="cancel-button"  style="display: none; background-color: #f44336;" onclick="cancelUpdate()">Cancel</button>
+      </div>
+    </form>
+    <div id="data-table">
+      <input type="text" id="myInput" name="searchinput" onkeyup="searchfunction(userData)" placeholder="Search for names" >
+      <select name="sortOrder" style="width:15%; padding: 10px 18px 10px 10px;" onchange="sortFunction()">
+        <option value="" selected disabled hidden>Sort Options</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th style="width: 15%">Name</th>
+            <th style="width: 25%">Email</th>
+            <th style="width: 10%">Gender</th>
+            <th style="width: 15%">Hobbies</th>
+            <th style="width: 12%">Country</th>
+            <th style="width: 15%">State</th>
+            <th style="width: 12%">City</th>
+            <th style="width: 30%">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--  -->
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
