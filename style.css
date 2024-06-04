@@ -99,10 +99,6 @@ button {
   background-color: #b56b6b;
 }
 
-#error{
-  color:#f44336;
-}
-
 #myInput{
   padding: 12px 20px 12px 12px;
   margin-bottom: 10px;
@@ -111,3 +107,6 @@ button {
   width: 84%;
 }
 
+#error{
+  color:#f44336;
+}
